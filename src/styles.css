@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+.breed-select {
+    cursor: pointer;
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.loader_style {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: rgb(7, 87, 248) rgb(237, 250, 3) transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader_style::after,
+.loader_style::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent rgb(237, 250, 3) rgb(7, 87, 248);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+
+.loader_style::before {
+    width: 32px;
+    height: 32px;
+    border-color: rgb(7, 87, 248) rgb(237, 250, 3) transparent transparent;
+    animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.loader {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+    color: rgb(7, 87, 248) rgb(32, 3, 250);
+    font-weight: bold;
+}
+
+.cat-info {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.image {
+    max-width: 600px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(11, 10, 10);
+    border-radius: 50px;
+}
+
+.name {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.description {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.temperament {
+    color: #333;
+}
